@@ -9,15 +9,16 @@ Transmitters are LED head/tail lights and a custom angle-of-arrival-sensing VLC 
 Vehicle trajectories are either generated using the well-known microscopic traffic simulator SUMO or generated manually using a custom MATLAB© script.
 
 The main components of the simulator are given below. Each component is configurable, and is documented in place.
-1. VLC Configuration Tool (00_vlcCfg)
 
-1.1 VLC Transmitter Radiation Pattern Configuration Tool (00_vlcCfg/vlcCfgTxPlrPatTool)
+- VLC Configuration Tool (00_vlcCfg)
 
-2. Vehicle Trajectory Configuration Tool (01_vehCfg)
+- VLC Transmitter Radiation Pattern Configuration Tool (00_vlcCfg/vlcCfgTxPlrPatTool)
 
-3. Vehicular VLC Simulation (02_v2lcDataGen)
+- Vehicle Trajectory Configuration Tool (01_vehCfg)
 
-4. Localization and Pose Estimation Algorithm (03_vlpVpeSim)
+- Vehicular VLC Simulation (02_v2lcDataGen)
+
+- Localization and Pose Estimation Algorithm (03_vlpAlgoSim)
 
 An overview of the simulator is shown below:
 
