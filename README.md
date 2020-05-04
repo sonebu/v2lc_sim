@@ -10,7 +10,7 @@ Vehicle trajectories are either generated using the well-known microscopic traff
 
 The main components of the simulator are given below. Each component is configurable, and is documented in place.
 
-- VLC Configuration Tool (00_vlcCfg)
+- VLC Transmitter and Receiver Configuration Tool (00_vlcCfg)
 
 - VLC Transmitter Radiation Pattern Configuration Tool (00_vlcCfg/vlcCfgTxPlrPatTool)
 
