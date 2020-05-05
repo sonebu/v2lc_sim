@@ -277,7 +277,7 @@ answer = questdlg('Save simulation output?', 'Save?', 'Yes','No','No');
 switch answer
     case 'Yes'
         answer = inputdlg('Enter filename for the output file','Output Filename',[1 50],{'vlpAlgoRun_<explanation>.mat'});
-        save(strcat('data/',answer{1}),'vlpAlgoRun');
+        save(strcat('results/',answer{1}),'vlpAlgoRun');
     case 'No'
         close all;
 end

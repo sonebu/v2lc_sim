@@ -1,1 +1,1 @@
-ToDo
+Auxiliary functions for "03_vlpAlgoSim/vlpAlgoSim.m", see comments in files for more information
