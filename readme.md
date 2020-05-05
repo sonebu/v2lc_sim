@@ -2,15 +2,15 @@
 
 ## Overview
 
-A MATLAB©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP) and VLP-based pose estimation. The simulator supports the following article under review:
+A MATLABÂ©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP) and VLP-based pose estimation. The simulator supports the following article under review:
 
 B. Soner, S. Coleri, "Visible Light Communication based Vehicle Localization and Pose Estimation".
 
-VLC channel simulation is radiometric and assumes LoS communication. VLC units are vehicle head/tail lights consisting of LED lights as transmitters and custom angle-of-arrival-sensing receivers, named QRX. The angle-of-arrival on the QRXs are calculated and are used for localization and pose estimation. Vehicle trajectories are either generated using the well-known microscopic traffic simulator SUMO or generated manually using a custom MATLAB© script.
+VLC channel simulation is radiometric and assumes LoS communication. VLC units are vehicle head/tail lights consisting of LED lights as transmitters and custom angle-of-arrival-sensing receivers, named QRX. The angle-of-arrival on the QRXs are calculated and are used for localization and pose estimation. Vehicle trajectories are either generated using the well-known microscopic traffic simulator SUMO or generated manually using a custom MATLABÂ© script.
 
 The main components are given below. Each component is configured via a script or a GUI, and is documented in place.
 
-- **VLC Configuration Tool ([00_vlcCfg](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg)) ** (QRX is the novel receiver proposed in the article)
+- **VLC Configuration Tool ([00_vlcCfg](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg))** (QRX is the novel receiver proposed in the article)
 
 - VLC Transmitter Radiation Pattern Configuration Tool ([00_vlcCfg/vlcCfgTxPlrPatTool](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg/vlcCfgTxPlrPatTool))
 
@@ -18,7 +18,7 @@ The main components are given below. Each component is configured via a script o
 
 - Vehicular VLC Simulation ([02_v2lcDataGen](https://github.com/sonebu/v2lc_sim/tree/master/02_v2lcDataGen))
 
-- **Localization and Pose Estimation Algorithm ([03_vlpAlgoSim](https://github.com/sonebu/v2lc_sim/tree/master/03_vlpAlgoSim)) ** (the novel algorithm proposed in the article)
+- **Localization and Pose Estimation Algorithm ([03_vlpAlgoSim](https://github.com/sonebu/v2lc_sim/tree/master/03_vlpAlgoSim))** (the novel algorithm proposed in the article)
 
 <img src="99_doc/v2lc_overview.png" alt="Drawing"/>
 
