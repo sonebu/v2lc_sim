@@ -10,7 +10,7 @@ VLC channel simulation is radiometric and assumes LoS communication. VLC units a
 
 The main components are given below. Each component is configured via a script or a GUI, and is documented in place.
 
-- VLC Configuration Tool ([00_vlcCfg](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg))
+- **VLC Configuration Tool ([00_vlcCfg](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg)) ** (QRX is the novel receiver proposed in the article)
 
 - VLC Transmitter Radiation Pattern Configuration Tool ([00_vlcCfg/vlcCfgTxPlrPatTool](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg/vlcCfgTxPlrPatTool))
 
@@ -18,11 +18,11 @@ The main components are given below. Each component is configured via a script o
 
 - Vehicular VLC Simulation ([02_v2lcDataGen](https://github.com/sonebu/v2lc_sim/tree/master/02_v2lcDataGen))
 
-- Localization and Pose Estimation Algorithm ([03_vlpAlgoSim](https://github.com/sonebu/v2lc_sim/tree/master/03_vlpAlgoSim))
+- **Localization and Pose Estimation Algorithm ([03_vlpAlgoSim](https://github.com/sonebu/v2lc_sim/tree/master/03_vlpAlgoSim)) ** (the novel algorithm proposed in the article)
 
 <img src="99_doc/v2lc_overview.png" alt="Drawing"/>
 
-## How to run the simulations
+## How to use the simulator
 
 - To regenerate the simulation figures in the article: run "03_vlpAlgoSim/vlpAlgoSim_plotResults.m" and choose which simulation you want to re-run. These correspond to the simulation scenarios presented in the article. You can't generate/plot new scenarios with this.
 
