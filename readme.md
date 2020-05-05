@@ -1,10 +1,10 @@
 # Vehicular VLC-VLP-VPE Simulator
 
+<img src="99_doc/wnl_blk_github.png" alt="Drawing" width="400"/>
+
 A MATLAB©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP) and VLP-based pose estimation (VPE). The simulator supports the following article under review:
 
 B. Soner, S. Coleri, "Visible Light Communication based Vehicle Localization and Pose Estimation".
-
-<img src="99_doc/wnl_blk_github.png" alt="Drawing" width="200"/>
 
 ## Overview
 
