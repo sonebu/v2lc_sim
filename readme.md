@@ -8,7 +8,7 @@ B. Soner, S. Coleri, "Visible Light Communication based Vehicle Localization and
 
 ## Overview
 
-VLC channel simulation is radiometric and assumes LoS communication. VLC units are vehicle head/tail lights consisting of LED lights as transmitters and custom angle-of-arrival-sensing receivers, named QRX. The angle-of-arrival on the QRXs are calculated and are used for localization and pose estimation. Vehicle trajectories are either generated using the well-known microscopic traffic simulator SUMO or generated manually using a custom MATLAB© script.
+VLC channel simulation is radiometric and assumes LoS communication. VLC units are vehicle head/tail lights consisting of LED lights as transmitters and custom angle-of-arrival-sensing receivers, named QRX. The angle-of-arrival on the QRXs are calculated and are used for localization and pose estimation. Vehicle trajectories are either generated using the well-known microscopic traffic simulator [SUMO](https://sumo.dlr.de/docs/index.html) or generated manually using a custom MATLAB© script.
 
 The main components are given below. Each component is configured via a script or a GUI, and is documented in place.
 
