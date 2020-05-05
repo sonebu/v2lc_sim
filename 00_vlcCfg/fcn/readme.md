@@ -1,1 +1,1 @@
-ToDo
+Auxiliary functions for "00_vlcCfg/vlcCfgTool.m", see comments in files for more information

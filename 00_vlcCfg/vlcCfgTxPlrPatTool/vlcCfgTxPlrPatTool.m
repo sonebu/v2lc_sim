@@ -3,8 +3,11 @@ addpath('fcn');
 
 % Load the polar pattern for your LED.
 % NOTE: check the example for requirements. Change the values on that one
-% to create new ones. The pattern has to be radially symmetric (about 0 deg).
-[fn, pt] = uigetfile('*','Select numeric polar pattern array from file');
+% to create new ones. The pattern has to be radially symmetric (about 0 deg) 
+% and needs to span +/- 90*sqrt(2) since we use a square-symmetric trapezoidal 
+% integrator (see vlcCfgTxPlrPatTool_radSymSrc3dIntegral.m). This didn't
+% work as expected with quad2d, that's why we had to write our own integrator
+[fn, pt] = uigetfile('data/*.mat','Select numeric polar pattern array, named "vlcCfgTxPlrPatNum_<>.mat", from file');
 load(strcat(pt,fn));
 
 % Compute volume under 3D rotated polar pattern, will be used for

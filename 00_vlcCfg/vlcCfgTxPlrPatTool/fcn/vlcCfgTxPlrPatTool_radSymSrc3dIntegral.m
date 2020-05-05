@@ -2,8 +2,8 @@ function [ vol ] = vlcCfgTxPlrPatTool_radSymSrc3dIntegral( rad_pat, eps1_xy, eps
 %vlcCfgTxPlrPatTool_radSymSrc3dIntegral Summary of this function goes here
 %   Detailed explanation goes here
 
-%%% This is our custom integrator, but wasn't used, kept here for
-%%% completeness..
+%%% This is our custom integrator, it's used here for initial volume calc,
+%%% the one in the simulator isn't used but kept there for completeness
 
 id0_eps1_xy = find(abs(rad_pat(1,:)-eps1_xy)==min(abs(rad_pat(1,:)-eps1_xy)));
 id0_eps2_xy = find(abs(rad_pat(1,:)-eps2_xy)==min(abs(rad_pat(1,:)-eps2_xy)));
