@@ -1,10 +1,10 @@
-# Vehicular VLC Simulator
+# Vehicular VLC-VLP-VPE Simulator
 
-## Overview
-
-A MATLAB©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP) and VLP-based pose estimation. The simulator supports the following article under review:
+A MATLAB©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP) and VLP-based pose estimation (VPE). The simulator supports the following article under review:
 
 B. Soner, S. Coleri, "Visible Light Communication based Vehicle Localization and Pose Estimation".
+
+## Overview
 
 VLC channel simulation is radiometric and assumes LoS communication. VLC units are vehicle head/tail lights consisting of LED lights as transmitters and custom angle-of-arrival-sensing receivers, named QRX. The angle-of-arrival on the QRXs are calculated and are used for localization and pose estimation. Vehicle trajectories are either generated using the well-known microscopic traffic simulator SUMO or generated manually using a custom MATLAB© script.
 
