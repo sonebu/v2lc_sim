@@ -6,4 +6,4 @@ A representative image of the simulator is shown below (there's no 3D rendering 
 
 <img src="../99_doc/v2lcRun_overview.png" alt="Drawing"/>
 
-Car 3D model from [link, accessed on 05.05.2020](https://www.cgtrader.com/items/153014/download-page#)
+The received power equation corresponds to a uniform beam pattern in this diagram for simple demonstration. Non-uniform beam patterns add a scaling factor that depends on the polar intensity distribution. Car 3D model from [link, accessed on 05.05.2020](https://www.cgtrader.com/items/153014/download-page#)
