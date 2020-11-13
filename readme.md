@@ -2,6 +2,7 @@
 
 <img src="99_doc/wnl_blk_github.png" alt="Drawing" width="400"/>
 
+<br/><br/> 
 A MATLAB©-based vehicular visible light communication (VLC) simulator for vehicle localization via visible light positioning (VLP). The simulator supports the following article under review:
 
 B. Soner, S. Coleri, "Visible Light Communication based Vehicle Localization for Collision Avoidance and Platooning".
@@ -14,13 +15,20 @@ The main components are given below. Each component is configured via a script, 
 
 - **VLC Configuration Tool ([00_vlcCfg](https://github.com/sonebu/v2lc_sim/tree/master/00_vlcCfg))** (QRX is the novel receiver proposed in the article, the schematics for the prototype will be provided in the future)
 
-<img src="99_doc/qrx.png" alt="Drawing"/>
-
 - Vehicle Trajectory Configuration Tool ([01_vehCfg](https://github.com/sonebu/v2lc_sim/tree/master/01_vehCfg))
 
 - Vehicular VLC Simulation ([02_v2lcDataGen](https://github.com/sonebu/v2lc_sim/tree/master/02_v2lcDataGen))
 
 - **Simulations for the Localization Algorithm ([03_simulations](https://github.com/sonebu/v2lc_sim/tree/master/03_simulations))** (the novel algorithm proposed in the article)
+
+
+**QRX:** 
+<br/><br/> 
+<img src="99_doc/qrx.png" alt="Drawing" width="800"/>
+
+**System Model:**
+<br/><br/> 
+<img src="99_doc/sysmdl.png" alt="Drawing" width="500"/>
 
 ## How to use the simulator
 
