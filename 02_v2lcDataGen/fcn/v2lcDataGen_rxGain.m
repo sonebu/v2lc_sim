@@ -3,7 +3,7 @@ function [ rx_gain] = v2lcDataGen_rxGain( txPlrPat, x, y, z, pd_ddl)
 %   Detailed explanation goes here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% WE'VE MADE AN APPROXIMATION HERE                                   %%%
+%%% (OBSOLETE) WE'VE MADE AN APPROXIMATION HERE                        %%%
 %%%                                                                    %%%
 %%% At the angular resolution we want (max 0.0001 deg), MATLAB can't   %%%
 %%% store the 3d surface representing the radiation pattern. So volume %%%
@@ -14,7 +14,7 @@ function [ rx_gain] = v2lcDataGen_rxGain( txPlrPat, x, y, z, pd_ddl)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% UPDATE: There's also a rectangle approximation actually...              %%%
+%%% (OBSOLETE) UPDATE: There's also a rectangle approximation actually...   %%%
 %%% Since our source is radially symmetric, the tilt and azimuth angles are %%%
 %%% affixed to the base of the 3d plot, this defines a rectangle. We divide %%%
 %%% this into as many parts as the resolution we desire (maybe we can think %%%
@@ -26,6 +26,17 @@ function [ rx_gain] = v2lcDataGen_rxGain( txPlrPat, x, y, z, pd_ddl)
 %%% radially symmetric sources but that should be automatized and currently %%%
 %%% is not implemented. This would actually be good because automotive beam %%%
 %%% patterns are pretty irregular                                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% UPDATE: OK dropped irregular polar patterns for now. We'll leave        %%%
+%%% ECE-compliant patterns as future work. With this, since Lambertian      %%%
+%%% approximations are cosine power functions (veeery smooth!), we'll just  %%%
+%%% sub-sample, fit, and interpolate with bicubic. The Lambertian is        %%%
+%%% unrealistic enough itself but becha uses it, so no need to kill         %%%
+%%% ourselves over the accuracy of the Lambertian pattern...                %%%
+%%% summary: just fit subsampled pattern and use quad2d, that's efficient   %%%
+%%% enough                                                                  %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Geometric calc on XY

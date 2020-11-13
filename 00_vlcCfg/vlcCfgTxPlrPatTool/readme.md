@@ -1,3 +1,0 @@
-### VLC TX Polar Pattern Configuration Tool
-
-<ins>"vlcCfgTxPlrPatTool.m"</ins> : Create custom polar intensity patterns. The input to the script (prompted at runtime) is a "data/vlcCfgTxPlrPatNum_<>.mat" file which simply contains a matrix named "vlcCfgTxPlrPatNum", of size (2,X), where higher X denotes higher resolution. The tool only supports radially symmetric patterns for now. Copy and adjust the basic examples under "data/" to generate your own custom pattern. The output is a "data/vlcCfgTxPlrPat_<>.mat" file, which is used by the VLC configuration tool: "vlcCfgTool.m" during VLC configuration. Auxiliary functions are in "fcn/"

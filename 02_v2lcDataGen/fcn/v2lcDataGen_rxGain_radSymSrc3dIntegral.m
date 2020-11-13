@@ -3,7 +3,12 @@ function [ vol ] = v2lcDataGen_rxGain_radSymSrc3dIntegral( rad_pat, eps1_xy, eps
 %   Detailed explanation goes here
 
 %%% This is our custom integrator, but wasn't used, kept here for
-%%% completeness..
+%%% completeness. We used to use this for accurately computing the AUC of
+%%% the TX pattern for normalizing it. This made sense during the Erdem's simit
+%%% approximation and the rectangular approximation, but we dropped those
+%%% now and focused on Lambertian approximations of radially symmetric
+%%% patterns due to the fact that MAJORITY of the existing works use that.
+%%% We'll handle ECE-compliant patterns in future work.
 
 id0_eps1_xy = find(abs(rad_pat(1,:)-eps1_xy)==min(abs(rad_pat(1,:)-eps1_xy)));
 id0_eps2_xy = find(abs(rad_pat(1,:)-eps2_xy)==min(abs(rad_pat(1,:)-eps2_xy)));
