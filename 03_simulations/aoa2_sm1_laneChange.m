@@ -119,7 +119,7 @@ if res == 1
                 sigmaW       = deg2rad([std(aoa_11,0,2) std(aoa_12,0,2) std(aoa_21,0,2) std(aoa_22,0,2)]);
                 P            = [x11 y11 x12 y12];
                 L            = vehicle.ego.width;
-                aoa2_crlb(i_crlb,:,:) = aoa2_evaluate_crlb(sigmaW, P, L);
+                aoa2_crlb(i_crlb,:,:) = aoa2_evaluate_crlb(sigmaW(i_crlb,:), P, L);
             end
         end
         crlb_4d = sqrt(abs(aoa2_crlb(:,1,1)) + abs(aoa2_crlb(:,2,2)) + abs(aoa2_crlb(:,3,3)) + abs(aoa2_crlb(:,4,4)) );

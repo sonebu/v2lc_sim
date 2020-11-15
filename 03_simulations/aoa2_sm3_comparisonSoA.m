@@ -119,7 +119,7 @@ if res == 1
                 sigmaW       = deg2rad([std(aoa_11,0,2) std(aoa_12,0,2) std(aoa_21,0,2) std(aoa_22,0,2)]);
                 P            = [x11 y11 x12 y12];
                 L            = vehicle.ego.width;
-                aoa2_crlb(i_crlb,:,:) = aoa2_evaluate_crlb(sigmaW, P, L);
+                aoa2_crlb(i_crlb,:,:) = aoa2_evaluate_crlb(sigmaW(i_crlb,:), P, L);
             end
         end
         crlb_4d = sqrt(abs(aoa2_crlb(:,1,1)) + abs(aoa2_crlb(:,2,2)) + abs(aoa2_crlb(:,3,3)) + abs(aoa2_crlb(:,4,4)) );
@@ -131,15 +131,14 @@ if res == 1
         plot(vehicle.t.values(1:vlpDecimRate:end),cx11(:,1),'LineWidth',2,'Color',colors{2},'LineStyle','-.')
         plot(vehicle.t.values(1:vlpDecimRate:end),cy11(:,1),'LineWidth',2,'Color',colors{3},'LineStyle','-.')
         grid on
-        legend('x_{11} actual','y_{11} actual','x_{11} estimated','y_{11} estimated','Location','best')
+        legend('x_{1} actual','y_{1} actual','x_{1} estimated','y_{1} estimated','Location','best')
         
         figure,
         yyaxis left
         semilogy(vehicle.t.values,e2d_stdev,'LineWidth',2,'Color',colors{color_counter})
         hold on
-        semilogy(vehicle.t.values(1:vlpDecimRate:end),crlb_2d,'LineWidth',2,'Color',colors{color_counter},'LineStyle','-.')
-
-        ylim([1e-2 1e0]), grid on
+        semilogy(vehicle.t.values(1:vlpDecimRate:end),crlb_2d,'LineWidth',2,'Color',colors{color_counter+2},'LineStyle','-')
+        ylim([5e-2 5e-1]), grid on
         color_counter = color_counter + 1;
 
         yyaxis right
@@ -148,12 +147,12 @@ if res == 1
         power_qrx2_tx1 = channel.qrx2.power.tx1.A+channel.qrx2.power.tx1.B+channel.qrx2.power.tx1.C+channel.qrx2.power.tx1.D;
         power_qrx1_tx2 = channel.qrx1.power.tx2.A+channel.qrx1.power.tx2.B+channel.qrx1.power.tx2.C+channel.qrx1.power.tx2.D;
         power_qrx2_tx2 = channel.qrx2.power.tx2.A+channel.qrx2.power.tx2.B+channel.qrx2.power.tx2.C+channel.qrx2.power.tx2.D;
-        plot(vehicle.t.values,power_qrx2_tx1+power_qrx2_tx2,'LineWidth',2)
+        plot(vehicle.t.values,power_qrx2_tx1+power_qrx2_tx2,'LineWidth',2,'Color',colors{color_counter})
         legend('\sigma_{simulated}','\sigma_{CRLB}','RX power','Location','best')
         
         ss = '\sigma';
-        figure,histfit(reshape(ex11,[1 size(ex11,1)*size(ex11,2)])), legend('histogram',sprintf('%s_{x_{11}}: %.3f', ss, std(reshape(ex11,[1 size(ex11,1)*size(ex11,2)]),'omitnan')),'Location','best');
-        figure,histfit(reshape(ey11,[1 size(ey11,1)*size(ey11,2)])), legend('histogram',sprintf('%s_{y_{11}}: %.3f', ss, std(reshape(ey11,[1 size(ey11,1)*size(ey11,2)]),'omitnan')),'Location','best');
+        figure,histfit(reshape(ex11,[1 size(ex11,1)*size(ex11,2)])), legend('histogram',sprintf('%s_{x_{1}}: %.3f', ss, std(reshape(ex11,[1 size(ex11,1)*size(ex11,2)]),'omitnan')),'Location','best'),xlim([-0.5 0.5]), grid on;
+        figure,histfit(reshape(ey11,[1 size(ey11,1)*size(ey11,2)])), legend('histogram',sprintf('%s_{y_{1}}: %.3f', ss, std(reshape(ey11,[1 size(ey11,1)*size(ey11,2)]),'omitnan')),'Location','best'),xlim([-0.5 0.5]), grid on;
         
     end
     
