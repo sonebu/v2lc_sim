@@ -1,4 +1,4 @@
-# Vehicular VLC-VLP-VPE Simulator
+# VLC-based Vehicle Localization Simulator
 
 <img src="99_doc/wnl_blk_github.png" alt="Drawing" width="400"/>
 
